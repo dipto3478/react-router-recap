@@ -3,7 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import Shop from "../Shop";
 import OverView from "../OverView";
 import "./Shops.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Shops = () => {
   const shops = useLoaderData();
   const [cart, setCart] = useState([]);
@@ -11,6 +12,7 @@ const Shops = () => {
   const handleAddToCart = (shops) => {
     const exists = cart.find((c) => c._id === shops._id);
     if (exists) {
+      toast("Already Added !");
     }
     const newCart = [...cart, shops];
     setCart(newCart);
@@ -37,6 +39,7 @@ const Shops = () => {
           handleRemoveToCart={handleRemoveToCart}
           cart={cart}
         ></OverView>
+        <ToastContainer />
       </div>
     </div>
   );
