@@ -15,7 +15,7 @@ const Home = () => {
           <span className="text-[#FFC200]">Fashion and Lifestyle</span>
           <br className="mt-4" /> Products
         </h1>
-        <Link to="/">
+        <Link to="/shops">
           <button className="py-2 px-4 mt-10 bg-[#FFC200] font-bold text-lg rounded ">
             ➡ View Our Shop
           </button>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,9 +10,30 @@ const Header = () => {
         </Link>
       </div>
       <nav className="flex items-center gap-5 font-bold text-white text-sm">
-        <Link to="/">Home</Link>
-        <Link to="/shops">Shops</Link>
-        <Link to="/about">About</Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-[#FFC200] underline" : ""
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-[#FFC200] underline" : ""
+          }
+          to="/shops"
+        >
+          Shops
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-[#FFC200] underline" : ""
+          }
+          to="/about"
+        >
+          About
+        </NavLink>
       </nav>
     </div>
   );
