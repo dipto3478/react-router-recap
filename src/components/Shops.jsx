@@ -1,9 +1,17 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
+import Shop from "./Shop";
 
 const Shops = () => {
+  const shops = useLoaderData();
+
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Hello Shop!</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
+        {shops.map((shop) => (
+          <Shop shop={shop} key={shop._id}></Shop>
+        ))}
+      </div>
     </div>
   );
 };
