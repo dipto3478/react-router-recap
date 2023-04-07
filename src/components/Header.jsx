@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center max-w-screen-xl mx-auto p-5">
+    <div className="flex justify-between items-center my-container p-5">
       <div>
         <Link to="/">
           <h3 className="text-xl text-white font-bold">🛒 Hello Shop</h3>
